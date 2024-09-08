@@ -46,7 +46,7 @@ body {
   gap: 10px;
 
   color: var(--fourth-color);
-  background-color: var(--third-color);
+  /* background-color: var(--third-color); */
 }
 
 .countdown .section {
@@ -55,8 +55,9 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  border-radius: 25px;
-  background-color: #ea0031;
+  border-radius: 25px 25px 10px 10px;
+  border: 1px solid var(--fourth-color);
+  /* background-color: #ea0031; */
 }
 
 .countdown .section .number {
@@ -67,7 +68,6 @@ body {
 
   border-radius: 25px 25px 0 0;
   font-size: 2.4rem;
-  /* background-color: #55667c; */
 }
 
 .countdown .section .time {
