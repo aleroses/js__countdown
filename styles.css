@@ -22,23 +22,59 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.container {
+.main {
+  width: 80vw;
+  height: 60vh;
   text-align: center;
+  border: 1px solid var(--third-color);
+  /* background-color: var(--second-color); */
 }
 
-/* .container h1 {
+/* .main h1 {
   color: var(--second-color);
-  
 } */
 
-#countdown {
-  font-size: 2rem;
+.countdown {
+  width: 100%;
+  /* font-size: 1.6rem; */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100px, 100%), 1fr)
+  );
+
+  gap: 10px;
+
   color: var(--fourth-color);
-  display: flex;
-  flex-direction: column;
+  background-color: var(--third-color);
 }
 
-#countdown p {
+.countdown .section {
+  height: 140px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 25px;
+  background-color: #ea0031;
+}
+
+.countdown .section .number {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px 25px 0 0;
+  font-size: 2.4rem;
+  /* background-color: #55667c; */
+}
+
+.countdown .section .time {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  background-color: #0f111a;
 }

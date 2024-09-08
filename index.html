@@ -6,19 +6,29 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Countdown</title>
+    <title>Countdown: New Year</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Countdown</h1>
-      <div id="countdown">
-        <p><span id="days"></span> days</p>
-        <p><span id="hours"></span> hours</p>
-        <p><span id="minutes"></span> minutes</p>
-        <p><span id="seconds"></span> seconds</p>
+    <main class="main">
+      <h1>New Year</h1>
+      <div class="countdown">
+        <section class="section">
+          <span class="days number"></span>
+          <span class="time">days</span>
+        </section class="section">
+        <section class="section">
+          <span class="hours number"></span>
+          <span class="time">hours</span>
+        </section class="section">
+        <section class="section">
+          <span class="minutes number"></span> <span class="time">minutes</span>
+        </section class="section">
+        <section class="section">
+          <span class="seconds number"></span> <span class="time">seconds</span>
+        </section class="section">
       </div>
-    </div>
+    </main>
     <script src="main.js" defer></script>
   </body>
 </html>
