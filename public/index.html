@@ -7,7 +7,12 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Countdown: New Year</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/tablet.css"
+      media="(min-width: 640px)"
+    />
   </head>
   <body>
     <main class="main">
@@ -16,17 +21,19 @@
         <section class="section">
           <span class="days number"></span>
           <span class="time">days</span>
-        </section class="section">
+        </section>
         <section class="section">
           <span class="hours number"></span>
           <span class="time">hours</span>
-        </section class="section">
+        </section>
         <section class="section">
-          <span class="minutes number"></span> <span class="time">minutes</span>
-        </section class="section">
+          <span class="minutes number"></span>
+          <span class="time">minutes</span>
+        </section>
         <section class="section">
-          <span class="seconds number"></span> <span class="time">seconds</span>
-        </section class="section">
+          <span class="seconds number"></span>
+          <span class="time">seconds</span>
+        </section>
       </div>
     </main>
     <script src="main.js" defer></script>
