@@ -9,7 +9,7 @@ function updateCountdown() {
 
   if (distance < 0) {
     clearInterval(interval);
-    document.getElementById("countdown").innerHTML =
+    document.querySelector(".countdown").innerHTML =
       "¡La cuenta regresiva ha terminado!";
     return;
   }
@@ -25,10 +25,10 @@ function updateCountdown() {
     (distance % (1000 * 60)) / 1000
   );
 
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+  document.querySelector(".days").innerText = days;
+  document.querySelector(".hours").innerText = hours;
+  document.querySelector(".minutes").innerText = minutes;
+  document.querySelector(".seconds").innerText = seconds;
 }
 
 const interval = setInterval(updateCountdown, 1000);
