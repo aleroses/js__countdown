@@ -42,7 +42,7 @@ body {
 }
 
 .countdown {
-  width: 100%;
+  width: 90%;
   max-width: 640px;
   /* font-size: 1.6rem; */
   display: grid;
@@ -58,7 +58,7 @@ body {
 }
 
 .countdown .section {
-  height: 140px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
