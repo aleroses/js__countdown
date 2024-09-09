@@ -24,6 +24,7 @@ body {
 
 .main {
   width: 90vw;
+  max-width: 600px;
   height: 60vh;
   text-align: center;
 
@@ -54,9 +55,8 @@ body {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100px, 100%), 1fr)
+    minmax(min(120px, 100%), 1fr)
   );
-
   gap: 10px;
 
   color: var(--fourth-color);
@@ -64,6 +64,7 @@ body {
 }
 
 .countdown .section {
+  max-width: 200px;
   height: 120px;
   display: flex;
   flex-direction: column;
@@ -73,6 +74,11 @@ body {
   border: 1px solid var(--fourth-color);
   /* background-color: #ea0031; */
 }
+
+/* .countdown .section4 {
+  grid-column: 3;
+  grid-row: 2;
+} */
 
 .countdown .section .number {
   height: 70%;
