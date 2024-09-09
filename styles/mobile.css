@@ -25,14 +25,14 @@ body {
 .main {
   width: 90vw;
   max-width: 600px;
-  height: 60vh;
+  height: 65vh;
   text-align: center;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 
   border-radius: 10px;
   border: 2px solid var(--third-color);
@@ -46,6 +46,13 @@ body {
 
 .main h2 {
   color: var(--fitfh-color);
+  width: 100%;
+  height: 34px;
+  font-size: 20px;
+  align-content: center;
+
+  /* Testing */
+  animation: grow-shrink 2s infinite; /* Aplica la animación */
 }
 
 .countdown {
@@ -72,13 +79,9 @@ body {
 
   border-radius: 25px 25px 10px 10px;
   border: 1px solid var(--fourth-color);
-  /* background-color: #ea0031; */
-}
 
-/* .countdown .section4 {
-  grid-column: 3;
-  grid-row: 2;
-} */
+  box-shadow: 0 3px 13px -8px var(--fourth-color);
+}
 
 .countdown .section .number {
   height: 70%;
@@ -97,4 +100,14 @@ body {
   align-items: center;
   border-radius: 0 0 10px 10px;
   background-color: #0f111a;
+}
+
+@keyframes grow-shrink {
+  0%,
+  100% {
+    font-size: 20px; /* Tamaño inicial en el 0% y 100% del ciclo */
+  }
+  50% {
+    font-size: 21px; /* Tamaño máximo en el 50% del ciclo */
+  }
 }
