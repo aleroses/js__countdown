@@ -109,5 +109,6 @@ body {
   }
   50% {
     font-size: 21px; /* Tamaño máximo en el 50% del ciclo */
+    color: var(--fourth-color);
   }
 }
