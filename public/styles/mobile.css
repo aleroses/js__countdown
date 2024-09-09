@@ -52,7 +52,7 @@ body {
   align-content: center;
 
   /* Testing */
-  animation: grow-shrink 2s infinite; /* Aplica la animación */
+  animation: grow-shrink 3s infinite; /* Aplica la animación */
 }
 
 .countdown {
@@ -108,7 +108,7 @@ body {
     font-size: 20px; /* Tamaño inicial en el 0% y 100% del ciclo */
   }
   50% {
-    font-size: 21px; /* Tamaño máximo en el 50% del ciclo */
+    font-size: 20.4px; /* Tamaño máximo en el 50% del ciclo */
     color: var(--fourth-color);
   }
 }
