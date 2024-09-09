@@ -103,8 +103,7 @@ body {
 }
 
 @keyframes grow-shrink {
-  0%,
-  100% {
+  0% {
     font-size: 20px; /* Tamaño inicial en el 0% y 100% del ciclo */
   }
   50% {
