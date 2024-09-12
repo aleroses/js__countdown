@@ -2,13 +2,13 @@ import { countdownDate } from "./utils/countdownDate.mjs";
 import { getTimeRemaining } from "./utils/timeCalculations.mjs";
 import { updateDOM } from "./utils/updateDOM.mjs";
 
-// 4. Función que ejecuta el flujo completo de la cuenta regresiva
+// 4. Function that executes the complete countdown flow.
 const updateCountdown = () => {
   const timeData = getTimeRemaining(countdownDate);
   updateDOM(timeData, interval);
 };
 
-// 5. Intervalo para actualizar la cuenta regresiva cada segundo
+// 5. Interval to update the countdown every second
 const interval = setInterval(updateCountdown, 1000);
 
 /*

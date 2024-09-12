@@ -1,4 +1,4 @@
-// 3. Función para actualizar el DOM con los valores calculados
+// 3. Function to update the DOM with the calculated values
 const updateDOM = (timeData, interval) => {
   const showDays = document.querySelector(".days");
   const showHours = document.querySelector(".hours");
