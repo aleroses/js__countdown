@@ -11,6 +11,22 @@ const updateCountdown = () => {
 // 5. Interval to update the countdown every second
 const interval = setInterval(updateCountdown, 1000);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 getTime(): devuelve el número de milisegundos que han transcurrido desde el 1 de enero de 1970 00:00:00 UTC
 
