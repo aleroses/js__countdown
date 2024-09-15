@@ -8,6 +8,11 @@ const updateDOM = (timeData, interval) => {
   if (timeData.expired) {
     document.querySelector(".countdown").innerHTML =
       "It's already a new year!";
+
+    const message = document.querySelector("h2");
+    message.classList.add("message")
+    message.innerHTML = "🎊🍇🚀🎉";
+
     clearInterval(interval);
   } else {
     showDays.innerHTML = timeData.days;
