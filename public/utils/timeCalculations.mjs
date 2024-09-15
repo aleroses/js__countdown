@@ -1,4 +1,3 @@
-// 2. Function for calculating the remaining time distance
 const getTimeRemaining = (targetDate) => {
   const now = new Date().getTime();
   const distance = targetDate - now;
@@ -14,11 +13,14 @@ const getTimeRemaining = (targetDate) => {
   const hours = minutes / 60;
   const days = hours / 24;
 
+  /* console.log(hours, hours % 24); */
+
   return {
     expired: false,
     days: Math.floor(days),
+    // % 24 quitá los dias y nos deja las horas
     hours: Math.floor(hours % 24),
-    minutes: Math.floor(minutes % 60),
+    minutes: Math.trunc(minutes % 60),
     seconds: Math.floor(seconds % 60),
   };
 };
