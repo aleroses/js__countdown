@@ -52,7 +52,12 @@ body {
   align-content: center;
 
   /* Testing */
-  animation: grow-shrink 3s infinite; /* Aplica la animación */
+  animation: grow-shrink 3s infinite;
+}
+
+.main .message {
+  height: 60px;
+  animation: jump 0.9s ease-in-out infinite;
 }
 
 .countdown {
@@ -109,5 +114,16 @@ body {
   50% {
     font-size: 20.4px;
     color: var(--fourth-color);
+  }
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    font-size: 21px;
+    transform: translateY(-10px);
   }
 }
