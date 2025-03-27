@@ -1,15 +1,26 @@
-import { countdownDate } from "./utils/countdownDate.mjs";
+import { getCountdownDate } from "./utils/countdownDate.mjs";
 import { getTimeRemaining } from "./utils/timeCalculations.mjs";
 import { updateDOM } from "./utils/updateDOM.mjs";
 
-// 4. Function that executes the complete countdown flow.
+let interval;
+let currentCountdownDate = getCountdownDate();
+
 const updateCountdown = () => {
-  const timeData = getTimeRemaining(countdownDate);
-  updateDOM(timeData, interval);
+  const timeData = getTimeRemaining(currentCountdownDate);
+
+  if (timeData.expired) {
+    // If expired, obtain a new date and restart
+    currentCountdownDate = getCountdownDate();
+    clearInterval(interval);
+    interval = setInterval(updateCountdown, 1000);
+    return;
+  }
+
+  updateDOM(timeData);
 };
 
-// 5. Interval to update the countdown every second
-const interval = setInterval(updateCountdown, 1000);
+// Start countdown
+interval = setInterval(updateCountdown, 1000);
 
 /*
 getTime(): devuelve el número de milisegundos que han transcurrido desde el 1 de enero de 1970 00:00:00 UTC

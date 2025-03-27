@@ -1,7 +1,18 @@
 // 1. Countdown target date
-const countdownDate = new Date(
-  "Dec 31, 2025 23:59:59"
-  /* "Sep 15, 2024 18:21:00" */
-).getTime();
+const getCountdownDate = () => {
+  const currentYear = new Date().getFullYear();
+  const targetDate = new Date(
+    `Dec 31, ${currentYear} 23:59:59`
+  );
 
-export { countdownDate };
+  // If the current year-end has already passed, use the next year
+  if (new Date() > targetDate) {
+    return new Date(
+      `Dec 31, ${currentYear + 1} 23:59:59`
+    ).getTime();
+  }
+
+  return targetDate.getTime();
+};
+
+export { getCountdownDate };
