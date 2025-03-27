@@ -5,7 +5,7 @@ const getCountdownDate = () => {
     `Dec 31, ${currentYear} 23:59:59`
   );
 
-  // Si ya pasó el fin de año actual, usar el próximo año
+  // If the current year-end has already passed, use the next year
   if (new Date() > targetDate) {
     return new Date(
       `Dec 31, ${currentYear + 1} 23:59:59`
@@ -14,10 +14,5 @@ const getCountdownDate = () => {
 
   return targetDate.getTime();
 };
-
-// const currentDate = new Date().getFullYear();
-// const countdownDate = new Date(
-//   `Dec 31, ${currectDate} 23:59:59`
-// ).getTime();
 
 export { getCountdownDate };
