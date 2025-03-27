@@ -5,7 +5,14 @@ const updateDOM = (timeData, interval) => {
   const showMinutes = document.querySelector(".minutes");
   const showSeconds = document.querySelector(".seconds");
 
-  if (timeData.expired) {
+  // console.log(timeData);
+
+  
+  if (
+    (timeData.expired,
+    timeData.newDay < 3,
+    timeData.newMont === 1)
+  ) {
     document.querySelector(".countdown").innerHTML =
       "It's already a new year!";
     clearInterval(interval);
