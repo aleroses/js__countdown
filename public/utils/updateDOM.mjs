@@ -5,12 +5,16 @@ const updateDOM = (timeData, interval) => {
   const showMinutes = document.querySelector(".minutes");
   const showSeconds = document.querySelector(".seconds");
 
-  if (timeData.expired) {
+  if (
+    timeData.expired &&
+    timeData.newDay < 3 &&
+    timeData.newMonth === 1
+  ) {
     document.querySelector(".countdown").innerHTML =
       "It's already a new year!";
 
     const message = document.querySelector("h2");
-    message.classList.add("message")
+    message.classList.add("message");
     message.innerHTML = "🎊🍇🚀🎉";
 
     clearInterval(interval);

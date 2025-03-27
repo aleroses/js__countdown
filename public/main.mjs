@@ -1,4 +1,4 @@
-import { countdownDate } from "./utils/countdownDate.mjs";
+/* import { countdownDate } from "./utils/countdownDate.mjs";
 import { getTimeRemaining } from "./utils/timeCalculations.mjs";
 import { updateDOM } from "./utils/updateDOM.mjs";
 
@@ -9,7 +9,31 @@ const updateCountdown = () => {
 };
 
 // 5. Interval to update the countdown every second
-const interval = setInterval(updateCountdown, 1000);
+const interval = setInterval(updateCountdown, 1000); */
+
+import { getCountdownDate } from "./utils/countdownDate.mjs";
+import { getTimeRemaining } from "./utils/timeCalculations.mjs";
+import { updateDOM } from "./utils/updateDOM.mjs";
+
+let interval;
+let currentCountdownDate = getCountdownDate();
+
+const updateCountdown = () => {
+  const timeData = getTimeRemaining(currentCountdownDate);
+
+  if (timeData.expired) {
+    // Si expiró, obtener nueva fecha y reiniciar
+    currentCountdownDate = getCountdownDate();
+    clearInterval(interval);
+    interval = setInterval(updateCountdown, 1000);
+    return;
+  }
+
+  updateDOM(timeData);
+};
+
+// Iniciar el countdown
+interval = setInterval(updateCountdown, 1000);
 
 /*
 getTime(): devuelve el número de milisegundos que han transcurrido desde el 1 de enero de 1970 00:00:00 UTC
