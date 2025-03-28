@@ -55,9 +55,9 @@ body {
   animation: grow-shrink 3s infinite;
 }
 
-.main .message {
+.main .emojis {
   height: 60px;
-  animation: jump 0.9s ease-in-out infinite;
+  /* animation: jump 0.9s ease-in-out infinite; */
 }
 
 .countdown {
@@ -73,6 +73,7 @@ body {
 
   color: var(--fourth-color);
   /* background-color: var(--third-color); */
+  animation: jump 0.9s ease-in-out infinite;
 }
 
 .countdown .section {
@@ -120,10 +121,10 @@ body {
 @keyframes jump {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(2px);
   }
   50% {
-    font-size: 21px;
-    transform: translateY(-10px);
+    /* font-size: 21px; */
+    transform: translateY(-2px);
   }
 }

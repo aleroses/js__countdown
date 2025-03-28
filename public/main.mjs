@@ -11,9 +11,7 @@ const updateCountdown = () => {
   if (timeData.expired) {
     // If expired, obtain a new date and restart
     currentCountdownDate = getCountdownDate();
-    clearInterval(interval);
-    interval = setInterval(updateCountdown, 1000);
-    return;
+    timeData = getTimeRemaining(currentCountdownDate);
   }
 
   updateDOM(timeData);
