@@ -1,8 +1,8 @@
-// 2. Función para calcular la distancia de tiempo restante
+// 2. Function for calculating the remaining time distance
 const getTimeRemaining = (targetDate) => {
   const date = new Date();
-  let newDay = date.getDate();
-  let newMont = date.getMonth() + 1;
+  const newDay = date.getDate();
+  const newMonth = date.getMonth() + 1;
 
   const now = new Date().getTime();
   const distance = targetDate - now;
@@ -25,7 +25,7 @@ const getTimeRemaining = (targetDate) => {
     minutes: Math.floor(minutes % 60),
     seconds: Math.floor(seconds % 60),
     newDay,
-    newMont,
+    newMonth,
   };
 };
 

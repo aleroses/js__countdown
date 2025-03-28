@@ -1,9 +1,18 @@
-// 1. Fecha objetivo para la cuenta regresiva
-const currentYear = new Date().getFullYear();
+// 1. Countdown target date
+const getCountdownDate = () => {
+  const currentYear = new Date().getFullYear();
+  const targetDate = new Date(
+    `Dec 31, ${currentYear} 23:59:59`
+  );
 
-const countdownDate = new Date(
-  `Dec 31, ${currentYear} 23:59:59`
-  /* "Sep 9, 2024 20:28:00" */
-).getTime();
+  // If the current year-end has already passed, use the next year
+  if (new Date() > targetDate) {
+    return new Date(
+      `Dec 31, ${currentYear + 1} 23:59:59`
+    ).getTime();
+  }
 
-export { countdownDate };
+  return targetDate.getTime();
+};
+
+export { getCountdownDate };

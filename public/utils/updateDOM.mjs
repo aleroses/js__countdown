@@ -1,20 +1,22 @@
-// 3. Función para actualizar el DOM con los valores calculados
+// 3. Function to update the DOM with the calculated values
 const updateDOM = (timeData, interval) => {
   const showDays = document.querySelector(".days");
   const showHours = document.querySelector(".hours");
   const showMinutes = document.querySelector(".minutes");
   const showSeconds = document.querySelector(".seconds");
 
-  // console.log(timeData);
-
-  
   if (
-    (timeData.expired,
-    timeData.newDay < 3,
-    timeData.newMont === 1)
+    timeData.expired &&
+    timeData.newDay < 3 &&
+    timeData.newMonth === 1
   ) {
     document.querySelector(".countdown").innerHTML =
       "It's already a new year!";
+
+    const message = document.querySelector("h2");
+    message.classList.add("message");
+    message.innerHTML = "🎊🍇🚀🎉";
+
     clearInterval(interval);
   } else {
     showDays.innerHTML = timeData.days;
