@@ -1,5 +1,5 @@
 // 3. Function to update the DOM with the calculated values
-const updateDOM = (timeData, interval) => {
+const updateDOM = (timeData) => {
   const showDays = document.querySelector(".days");
   const showHours = document.querySelector(".hours");
   const showMinutes = document.querySelector(".minutes");
@@ -20,10 +20,10 @@ const updateDOM = (timeData, interval) => {
 
     emojis.textContent = "🎊🍇🚀🎉";
   } else {
-    showDays.innerHTML = timeData.days;
-    showHours.innerHTML = timeData.hours;
-    showMinutes.innerHTML = timeData.minutes;
-    showSeconds.innerHTML = timeData.seconds;
+    showDays.textContent = timeData.days;
+    showHours.textContent = timeData.hours;
+    showMinutes.textContent = timeData.minutes;
+    showSeconds.textContent = timeData.seconds;
   }
 };
 
