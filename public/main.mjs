@@ -6,7 +6,7 @@ let interval;
 let currentCountdownDate = getCountdownDate();
 
 const updateCountdown = () => {
-  const timeData = getTimeRemaining(currentCountdownDate);
+  let timeData = getTimeRemaining(currentCountdownDate);
 
   if (timeData.expired) {
     // If expired, obtain a new date and restart
