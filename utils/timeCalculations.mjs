@@ -1,13 +1,12 @@
 // 2. Function for calculating the remaining time distance
 const getTimeRemaining = (targetDate) => {
-  const date = new Date();
-  const newDay = date.getDate();
-  const newMonth = date.getMonth() + 1;
+  const now = new Date();
+  const newDay = now.getDate();
+  const newMonth = now.getMonth() + 1;
 
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+  const distance = targetDate - now.getTime();
 
-  if (distance < 0) {
+  if (newDay < 3 && newMonth === 1) {
     return {
       expired: true,
     };
